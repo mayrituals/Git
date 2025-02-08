@@ -100,7 +100,7 @@ git reset --hard HEAD~1
 Used to reset the repository's state and move the branch pointer to the previous commit.
 
 ## Working with branches
-Some useful commands to create and work with branches and merge them.
+Some useful commands to create, work and merge branches.
 
 ### Creating a new branch
 
