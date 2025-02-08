@@ -7,21 +7,21 @@ For example, we can see how I created my GitHub portfolio step by step.
 ## Navigation
 
 - [Creating repository](#creating-repository)
-- [Cloning our repository](#cloning-our-repository)
-- [Checking repository status](#checking-repository-status)
-- [Opening VSC with console](#opening-vsc-with-console)
-- [Adding changes](#adding-changes)
-- [Commit changes](#commit-changes)
-- [Uploading commits](#uploading-our-local-commits-to-a-remote-repository)
+ - [Cloning our repository](#cloning-our-repository)
+ - [Checking repository status](#checking-repository-status)
+ - [Opening VSC with console](#opening-vsc-with-console)
+ - [Adding changes](#adding-changes)
+ - [Commit changes](#commit-changes)
+ - [Uploading commits](#uploading-our-local-commits-to-a-remote-repository)
+ - [Updating the local repository](#updating-the-local-repository)
+ - [Updating the local repository](#updating-the-local-repository)
+ - [Resetting changes](#resetting-changes)
 - [Working with branches](#working-with-branches)
   - [Creating a new branch](#creating-a-new-branch)
   - [Listing all branches](#listing-all-branches)
   - [Switching to another branch](#switching-to-another-branch)
   - [Creating and switching to a new branch](#creating-and-switching-to-a-new-branch-in-one-command)
   - [Merging branches](#merging-branches)
-- [Updating the local repository](#updating-the-local-repository)
-- [Viewing commit history](#viewing-commit-history)
-- [Resetting changes](#resetting-changes)
 
 ## Working with Repository
 
