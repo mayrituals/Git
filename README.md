@@ -1,4 +1,4 @@
-# git
+# Git
 
 In this repository I would like to provide some commands that I use to work with Git console and local/remote repositories.
 
