@@ -1,142 +1,186 @@
 # Git
 
-In this repository I would like to provide some commands that I use to work with Git console and local/remote repositories.
+This repository contains useful Git commands that I personally use when working with local and remote repositories through the console.
 
-For example, we can see how I created my GitHub portfolio step by step.
+Here, I document the exact steps I followed to create my GitHub portfolio and some additional useful commands.
 
-## Navigation
+## Table of Contents
 
-- [Creating repository](#creating-repository)
-  - [Cloning our repository](#cloning-our-repository)
-  - [Checking repository status](#checking-repository-status)
-  - [Opening VSC with console](#opening-vsc-with-console)
-  - [Adding changes](#adding-changes)
-  - [Commit changes](#commit-changes)
-  - [Uploading commits](#uploading-our-local-commits-to-a-remote-repository)
-  - [Updating local repository](#updating-local-repository)
-  - [Updating with remote changes](#updating-with-remote-changes)
-  - [Resetting changes](#resetting-changes)
-- [Working with branches](#working-with-branches)
-  - [Creating a new branch](#creating-a-new-branch)
-  - [Listing all branches](#listing-all-branches)
-  - [Switching to another branch](#switching-to-another-branch)
-  - [Creating and switching to a new branch](#creating-and-switching-to-a-new-branch-in-one-command)
-  - [Merging branches](#merging-branches)
+- [Setting Up the Repository](#setting-up-the-repository)
+  - [Cloning the Repository](#cloning-the-repository)
+  - [Checking the Repository Status](#checking-the-repository-status)
+  - [Opening VS Code from the Console](#opening-vs-code-from-the-console)
+  - [Staging Changes](#staging-changes)
+  - [Committing Changes](#committing-changes)
+  - [Pushing Commits](#pushing-commits)
+  - [Pulling Latest Changes](#pulling-latest-changes)
+  - [Viewing Commit History](#viewing-commit-history)
+  - [Resetting Changes](#resetting-changes)
+- [Working with Branches](#working-with-branches)
+  - [Creating a New Branch](#creating-a-new-branch)
+  - [Listing All Branches](#listing-all-branches)
+  - [Switching to Another Branch](#switching-to-another-branch)
+  - [Creating and Switching to a New Branch](#creating-and-switching-to-a-new-branch)
+  - [Merging Branches](#merging-branches)
+  - [Deleting a Branch](#deleting-a-branch)
+  - [Handling Merge Conflicts](#handling-merge-conflicts)
 
-## Working with Repository
+## Setting Up the Repository
 
-### Creating repository
+### Creating the Repository
 
-```git
+```sh
 git init mayrituals
 ```
 
-If using a username the same as in GitHub, we can get a special README file that we can turn into our portfolio.
+If your GitHub username matches the repository name, GitHub automatically creates a special `README.md` file that can be used to set up a portfolio.
 
-### Cloning our repository
+### Cloning the Repository
 
-```git
+```sh
 git clone https://github.com/mayrituals/mayrituals.git
 ```
 
-We need to copy our link on GitHub to our repository to clone it on our computer.
+Copy the repository link from GitHub and use the command above to clone it to your local machine.
 
-### Checking repository status
+### Checking the Repository Status
 
-```git
+```sh
 git status
 ```
 
-Just to check if our file is in its right place.
+This command helps verify if there are any changes or untracked files in the repository.
 
-### Opening VSC with console
+### Opening VS Code from the Console
 
-```git
+```sh
 code mayrituals
 ```
 
-VSC opened, and we can edit our README file. Save file (CTRL + S) after you did changes or added new things.
+This opens VS Code, allowing you to start editing files. Don't forget to save changes (`CTRL + S`).
 
-### Adding changes
+### Staging Changes
 
-```git
-git add . or (file_name)
+```sh
+git add .
 ```
 
-We're using this command to stage our changes before committing them.
+or for specific files:
 
-### Commit changes
-
-```git
-git commit -m "Portfolio Description Update"
+```sh
+git add filename.ext
 ```
 
-### Uploading our local commits to a remote repository
+This prepares the changes to be committed.
 
-```git
+### Committing Changes
+
+```sh
+git commit -m "Updated portfolio description"
+```
+
+### Pushing Commits
+
+```sh
 git push
 ```
 
-### Updating local repository
+This uploads local commits to the remote GitHub repository.
 
-```git
+### Pulling Latest Changes
+
+```sh
 git pull
 ```
 
-In case if the changes were made on the remote repository by somebody and we need to have it on our computer.
+Use this if changes were made remotely and you need to update your local copy.
 
-### Viewing commit history
+### Viewing Commit History
 
-```git
+```sh
 git log
 ```
 
-### Resetting changes
+This displays the commit history of the repository.
 
-```git
+### Resetting Changes
+
+```sh
 git reset --hard HEAD~1
 ```
 
-Used to reset the repository's state and move the branch pointer to the previous commit.
+This resets the repository to the previous commit, discarding all changes.
 
-## Working with branches
-Some useful commands to create, work and merge branches.
+## Working with Branches
 
-### Creating a new branch
+### Creating a New Branch
 
-```git
+```sh
 git branch feature-branch
 ```
 
-### Listing all branches
+### Listing All Branches
 
-```git
+```sh
 git branch
 ```
 
-### Switching to another branch
+### Switching to Another Branch
 
-```git
+```sh
 git checkout feature-branch
 ```
 
-```git
+or
+
+```sh
 git switch feature-branch
 ```
 
-### Creating and switching to a new branch in one command
+### Creating and Switching to a New Branch
 
-```git
+```sh
 git checkout -b new-branch
 ```
 
-```git
+or
+
+```sh
 git switch -c new-branch
 ```
 
-### Merging branches
+### Merging Branches
 
-```git
+```sh
 git checkout main
 git merge feature-branch
 ```
+
+This merges `feature-branch` into the `main` branch.
+
+### Deleting a Branch
+
+```sh
+git branch -d feature-branch
+```
+
+Use this to delete a branch after merging it into `main`. If the branch hasn’t been merged yet, force delete it with:
+
+```sh
+git branch -D feature-branch
+```
+
+### Handling Merge Conflicts
+
+If you encounter a merge conflict, Git will notify you. Open the conflicting files and manually resolve the conflicts. After resolving them, run:
+
+```sh
+git add .
+git commit -m "Resolved merge conflict"
+```
+
+This finalizes the merge and commits the resolved changes.
+
+---
+
+This guide serves as my personal reference when working with Git. I hope it helps others as well!
